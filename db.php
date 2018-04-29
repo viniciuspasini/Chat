@@ -24,6 +24,6 @@ function query_msg($connect)
 			tb_chat
 	";
 
-	$pRetorno = mysqli_fetch_array(mysqli_query($connect, $aSql));
+	$pRetorno = mysqli_fetch_all(mysqli_query($connect, $aSql));
 	return $pRetorno ? $pRetorno : array();
 }
